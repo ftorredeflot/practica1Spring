@@ -16,6 +16,8 @@ public class Player {
     private Integer nassists;
     private Integer nrebots;
     private String pos;
+    @ManyToOne
+    private Team team;
 
     public Player(String name, LocalDate birthdate, Integer nbaskets, Integer nassists, Integer nrebots, String pos) {
         this.name = name;
@@ -82,6 +84,14 @@ public class Player {
 
     public void setPos(String pos) {
         this.pos = pos;
+    }
+
+    public Team getTeam() {
+        return team;
+    }
+
+    public void setTeam(Team team) {
+        this.team = team;
     }
 
     @Override
