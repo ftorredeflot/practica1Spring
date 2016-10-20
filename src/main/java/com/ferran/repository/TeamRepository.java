@@ -2,7 +2,7 @@ package com.ferran.repository;
 
 import java.util.List;
 
-import com.ferran.domain.Player;
+import com.ferran.domain.Team;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
