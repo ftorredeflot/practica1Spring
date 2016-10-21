@@ -104,7 +104,7 @@ public class PlayerService {
         System.out.println(playerRepository.findByposEquals("base"));
 
         System.out.println("edad anterior a 29-10-1989");
-        System.out.println(playerRepository.findBybirthdateLessThan(LocalDate.of(1989,10,29)));
+        System.out.println(playerRepository.findBybirthdateAfter(LocalDate.of(1994,10,29)));
 
 
 

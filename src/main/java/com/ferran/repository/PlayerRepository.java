@@ -21,7 +21,7 @@ public interface PlayerRepository extends JpaRepository<Player, Long> {
     List<Player> findBynbasketsGreaterThanEqual(Integer nbaskets);
     List<Player> findBynbasketsBetween(Integer mbaskets, Integer maxbaskets);
     List<Player> findByposEquals(String posicio);
-    List<Player> findBybirthdateLessThan(LocalDate edat);
+    List<Player> findBybirthdateAfter(LocalDate edat);
 
 
 }
