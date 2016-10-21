@@ -114,6 +114,33 @@ public class PlayerService {
         System.out.println(playerRepository.findByTeamNameAndPos("barça","base"));
 
 
+        System.out.println("AVG per position");
+        List<Object[]> playerList = playerRepository.findAVGStatisticsFromPosition();
+        for (Object[] pos : playerList) //Object - Jugador?
+        {
+            System.out.println("Posicion: "+pos[0]);
+            System.out.println("AVG Canastas: "+pos[1]);
+            System.out.println("AVG Asistencias: "+pos[2]);
+            System.out.println("AVG Rebotes: "+pos[3]);
+        }
+        System.out.println("AVG,MIN,MAX per position");
+        List<Object[]> playerListComp = playerRepository.findAVGMINMAXStatisticsFromPosition();
+        for (Object[] pos : playerListComp) //Object - Jugador?
+        {
+            System.out.println("Posicion: "+pos[0]);
+            System.out.println("AVG Canastas: "+pos[1]);
+            System.out.println("AVG Asistencias: "+pos[2]);
+            System.out.println("AVG Rebotes: "+pos[3]);
+            System.out.println("MAX Canastas: "+pos[4]);
+            System.out.println("MAX Asistencias: "+pos[5]);
+            System.out.println("MAX Rebotes: "+pos[6]);
+            System.out.println("MIN Canastas: "+pos[7]);
+            System.out.println("MIN Asistencias: "+pos[8]);
+            System.out.println("MIN Rebotes: "+pos[9]);
+
+        }
+
+
 
 
     }
