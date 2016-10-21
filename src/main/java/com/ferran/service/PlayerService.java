@@ -94,7 +94,7 @@ public class PlayerService {
         System.out.println(playerRepository.findByname(p2.getName()));
 
         System.out.println("numero de canastas");
-System.out.println(playerRepository.findBynbasketsGreaterThanEqual(120));
+        System.out.println(playerRepository.findBynbasketsGreaterThanEqual(120));
 
 
 
