@@ -106,6 +106,9 @@ public class PlayerService {
         System.out.println("edad anterior a 29-10-1989");
         System.out.println(playerRepository.findBybirthdateAfter(LocalDate.of(1994,10,29)));
 
+        System.out.println("equip per ciutat");
+        System.out.println(teamRepository.findBycity("barcelona"));
+
 
 
 
