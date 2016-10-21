@@ -1,7 +1,6 @@
 package com.ferran.repository;
 
 import com.ferran.domain.Player;
-import com.ferran.domain.Team;
 
 import java.time.LocalDate;
 import java.util.List;
