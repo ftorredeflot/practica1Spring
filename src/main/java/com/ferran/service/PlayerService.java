@@ -89,12 +89,22 @@ public class PlayerService {
 
 
 
+        System.out.println("Trobar per nom: que conte");
+        System.out.println(playerRepository.findBynameContaining("fer"));
         System.out.println("Trobar per nom:");
-        System.out.println(playerRepository.findByname("fer"));
         System.out.println(playerRepository.findByname(p2.getName()));
 
         System.out.println("numero de canastas");
         System.out.println(playerRepository.findBynbasketsGreaterThanEqual(120));
+
+        System.out.println("numero de canastas por rango");
+        System.out.println(playerRepository.findBynbasketsBetween(107,120));
+
+        System.out.println("tots els bases:");
+        System.out.println(playerRepository.findByposEquals("base"));
+
+        System.out.println("edad anterior a 29-10-1989");
+        System.out.println(playerRepository.findBybirthdateLessThan(LocalDate.of(1989,10,29)));
 
 
 
