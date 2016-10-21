@@ -108,6 +108,10 @@ public class PlayerService {
 
         System.out.println("equip per ciutat");
         System.out.println(teamRepository.findBycity("barcelona"));
+        System.out.println("jugadors del BARÇA");
+        System.out.println(playerRepository.findByTeamName("barça"));
+        System.out.println("jugadors del BARÇA que son bases");
+        System.out.println(playerRepository.findByTeamNameAndPos("barça","base"));
 
 
 

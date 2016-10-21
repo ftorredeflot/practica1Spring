@@ -1,6 +1,7 @@
 package com.ferran.repository;
 
 import com.ferran.domain.Player;
+import com.ferran.domain.Team;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -22,6 +23,8 @@ public interface PlayerRepository extends JpaRepository<Player, Long> {
     List<Player> findBynbasketsBetween(Integer mbaskets, Integer maxbaskets);
     List<Player> findByposEquals(String posicio);
     List<Player> findBybirthdateAfter(LocalDate edat);
+    List<Player> findByTeamName(String name);
+    List<Player> findByTeamNameAndPos(String name,String pos);
 
 
 }
