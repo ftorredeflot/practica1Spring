@@ -16,5 +16,6 @@ public interface PlayerRepository extends JpaRepository<Player, Long> {
     //Spring Data Queries
 
     List<Player> findByname(String name);
+    List<Player> findBynbasketsGreaterThanEqual(Integer nbaskets);
 
 }

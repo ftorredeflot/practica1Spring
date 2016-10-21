@@ -96,7 +96,7 @@ public class Player {
 
     @Override
     public String toString() {
-        return "Jugador{" +
+        return "Player{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", birthdate=" + birthdate +
@@ -104,6 +104,7 @@ public class Player {
                 ", nassists=" + nassists +
                 ", nrebots=" + nrebots +
                 ", pos='" + pos + '\'' +
+                ", team=" + team +
                 '}';
     }
 }
