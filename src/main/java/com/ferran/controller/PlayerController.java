@@ -29,4 +29,10 @@ public class PlayerController {
     public List<Player> findAll(){
         return playerRepository.findAll();
     }
+
+    @RequestMapping(value = "/assists/{num}",
+            method =RequestMethod.GET)
+    public List<Player> findByAssists(@PathVariable Integer num){
+        return playerRepository.findBynassistsGreaterThanEqual(num);
+    }
 }
