@@ -22,7 +22,7 @@ public class PlayerService {
 
     public void testPlayers(){
 
-        Player p1 = new Player("fermin",LocalDate.of(1994,10,29), 10,3,2,"base");
+        Player p1 = new Player("fermin",LocalDate.of(1994,10,29), 190,3,2,"base");
         Player p2 = new Player("pepe",LocalDate.of(1984,12,19), 150,120,20,"pibot");
         Player p3 = new Player("javier metalero",LocalDate.of(1988,1,29), 140,30,25,"alero");
         Player p4 = new Player("kelvin",LocalDate.of(1990,8,29), 106,63,42,"base");
@@ -140,6 +140,10 @@ public class PlayerService {
 
         }
 
+
+
+        System.out.println("maximo puntuador del barça");
+        System.out.println(playerRepository.findMaxPointsPlayerByTeam(t1));
 
 
 

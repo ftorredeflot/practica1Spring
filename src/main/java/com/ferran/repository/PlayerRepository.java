@@ -34,4 +34,10 @@ public interface PlayerRepository extends JpaRepository<Player, Long> {
             "MAX(player.nbaskets),  MAX(player.nassists), MAX(player.nrebots) from Player player GROUP BY player.pos")
     List <Object[]> findAVGMINMAXStatisticsFromPosition();
 
+    @Query("SELECT player from Player player WHERE player.team = :team AND player.nbaskets IN (SELECT MAX(player.nbaskets) FROM Player player WHERE player.team = :team)")
+    List<Player> findMaxPointsPlayerByTeam(@Param("team") Team team);
+
+
+
+
 }
