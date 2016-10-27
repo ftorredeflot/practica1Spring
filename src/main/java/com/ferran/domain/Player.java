@@ -9,19 +9,22 @@ import java.time.LocalDate;
 public class Player {
      @Id
      @GeneratedValue(strategy = GenerationType.AUTO)
+
      private long id;
+    @Column(unique=true)
      private String name;
-     private LocalDate birthdate;
+   //  private LocalDate birthdate;
      private Integer nbaskets;
     private Integer nassists;
     private Integer nrebots;
     private String pos;
-    @ManyToOne
-    private Team team;
+   // @ManyToOne
+   // private Team team;
 
-    public Player(String name, LocalDate birthdate, Integer nbaskets, Integer nassists, Integer nrebots, String pos) {
+    public Player(String name, /*LocalDate birthdate,*/ Integer nbaskets, Integer nassists, Integer nrebots, String pos) {
+
         this.name = name;
-        this.birthdate = birthdate;
+       // this.birthdate = birthdate;
         this.nbaskets = nbaskets;
         this.nassists = nassists;
         this.nrebots = nrebots;
@@ -46,13 +49,13 @@ public class Player {
         this.name = name;
     }
 
-    public LocalDate getBirthdate() {
+    /*public LocalDate getBirthdate() {
         return birthdate;
     }
 
     public void setBirthdate(LocalDate birthdate) {
         this.birthdate = birthdate;
-    }
+    }*/
 
     public Integer getNbaskets() {
         return nbaskets;
@@ -86,15 +89,14 @@ public class Player {
         this.pos = pos;
     }
 
-    public Team getTeam() {
+  /*  public Team getTeam() {
         return team;
     }
 
     public void setTeam(Team team) {
         this.team = team;
-    }
-
-    @Override
+    }*/
+/*    @Override
     public String toString() {
         return "Player{" +
                 "id=" + id +
@@ -105,6 +107,18 @@ public class Player {
                 ", nrebots=" + nrebots +
                 ", pos='" + pos + '\'' +
                 ", team=" + team +
+                '}';
+    }*/
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", nbaskets=" + nbaskets +
+                ", nassists=" + nassists +
+                ", nrebots=" + nrebots +
+                ", pos='" + pos + '\'' +
                 '}';
     }
 }
