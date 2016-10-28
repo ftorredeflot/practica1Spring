@@ -5,6 +5,8 @@ import com.ferran.repository.PlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -16,6 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/players")
 public class PlayerController {
+    private final Logger log = LoggerFactory.getLogger(PlayerController.class);
 
     @Autowired
     private PlayerRepository playerRepository;
@@ -39,6 +42,7 @@ public class PlayerController {
     @RequestMapping(value = "/{id}",
             method = RequestMethod.GET)
     public Player findById(@PathVariable Long id){
+        log.debug("REST request to delete Player : {}", id);
         Player player =  playerRepository.findOne(id);
         return player;
     }
