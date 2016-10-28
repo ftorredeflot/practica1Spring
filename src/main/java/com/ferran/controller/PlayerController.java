@@ -35,4 +35,20 @@ public class PlayerController {
     public List<Player> findByAssists(@PathVariable Integer num){
         return playerRepository.findBynassistsGreaterThanEqual(num);
     }
+
+    @RequestMapping(value = "/{id}",
+            method = RequestMethod.GET)
+    public Player findById(@PathVariable Long id){
+        Player player =  playerRepository.findOne(id);
+        return player;
+    }
+
+    @RequestMapping(value = "/bypoints/{num}",
+            method = RequestMethod.GET)
+    public List<Player> findByPointsGreaterThan(@PathVariable Integer num){
+        return playerRepository.findBynbasketsGreaterThanEqual(num);
+    }
+
+
+
 }
