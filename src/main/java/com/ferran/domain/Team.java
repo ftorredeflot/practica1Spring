@@ -11,14 +11,15 @@ public class Team {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+    @Column(unique=true)
     private String name;
     private String city;
-    private LocalDate fundate;
+   // private LocalDate fundate;
 
-    public Team(String name, String city, LocalDate fundate) {
+    public Team(String name, String city/*, LocalDate fundate*/) {
         this.name = name;
         this.city = city;
-        this.fundate = fundate;
+        //this.fundate = fundate;
     }
 
     public Team(){}
@@ -47,13 +48,13 @@ public class Team {
         this.city = city;
     }
 
-    public LocalDate getFundate() {
+   /* public LocalDate getFundate() {
         return fundate;
     }
 
     public void setFundate(LocalDate fundate) {
         this.fundate = fundate;
-    }
+    }*/
 
     @Override
     public String toString() {
@@ -61,9 +62,6 @@ public class Team {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", city='" + city + '\'' +
-                ", fundate=" + fundate +
                 '}';
     }
-
-
 }

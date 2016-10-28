@@ -39,9 +39,9 @@ public class PlayerService {
         Player p15 = new Player("ricard",/*LocalDate.of(1997,6,29),*/ 190,3,2,"alero");
 
 
-        Team t1=new Team("barça","barcelona",LocalDate.of(1899,1,1));
-        Team t2=new Team("madrid","madrid",LocalDate.of(1903,1,1));
-        Team t3=new Team("Bilbao","bilbao",LocalDate.of(1905,1,1));
+        Team t1=new Team("barça","barcelona"/*,LocalDate.of(1899,1,1)*/);
+        Team t2=new Team("madrid","madrid"/*,LocalDate.of(1903,1,1)*/);
+        Team t3=new Team("Bilbao","bilbao"/*,LocalDate.of(1905,1,1)*/);
         teamRepository.save(t1);
         teamRepository.save(t2);
         teamRepository.save(t3);
