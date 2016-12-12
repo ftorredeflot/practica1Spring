@@ -53,6 +53,11 @@ public class PlayerController {
         return playerRepository.findBynbasketsGreaterThanEqual(num);
     }
 
+    @GetMapping("/orderby/baskets")
+    public List<Player> findByOrderByNbaskets(){
+        return playerRepository.findByOrderByNbaskets();
+    }
+
 
 
 }
